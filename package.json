@@ -1,0 +1,11 @@
+{
+  "name": "com.alexey-developer89.ecs-task",
+  "version": "1.0.0",
+  "displayName": "EcsTask",
+  "description": "Async task type whose code resumes inside an EcsSystemSyncContext drain, not in the PlayerLoop.",
+  "unity": "2020.3",
+  "author": {
+    "name": "Alexey",
+    "email": "i.leha98@outlook.com"
+  }
+}
