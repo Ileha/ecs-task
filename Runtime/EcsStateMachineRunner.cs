@@ -19,7 +19,7 @@ namespace LeoECSLiteExtensions.Async
             if (SynchronizationContext.Current is not EcsSystemSyncContext context)
             {
                 throw new InvalidOperationException(
-                    $"{nameof(EcsTask)} methods can be called only while an {nameof(EcsSystemSyncContext)} is current (e.g. inside AsyncRunSystem.Run)");
+                    $"{nameof(EcsTask)} methods can be called only while an {nameof(EcsSystemSyncContext)} is current");
             }
 
             return new EcsStateMachineRunner { _context = context };

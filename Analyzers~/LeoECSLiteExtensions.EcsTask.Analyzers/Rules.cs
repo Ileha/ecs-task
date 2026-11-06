@@ -3,8 +3,7 @@ using Microsoft.CodeAnalysis;
 namespace LeoECSLiteExtensions.Analyzers
 {
     /// <summary>
-    /// EcsTask rules that need no ECS. They share the LEOECS 1xx async group with the ECS rules in
-    /// com.alexey-developer89.ecs-async-system. See README.md for examples.
+    /// EcsTask rules of the LEOECS 1xx async group. They need no ECS. See README.md for examples.
     /// </summary>
     internal static class Rules
     {
@@ -17,8 +16,8 @@ namespace LeoECSLiteExtensions.Analyzers
             category: Category,
             defaultSeverity: DiagnosticSeverity.Warning,
             isEnabledByDefault: true,
-            description: "The owner of an EcsTask cancels its token: AsyncRunSystem on destroy, an EcsTask GOAP action " +
-                         "when the action ends. A wait without the token stays pending, and its finally blocks never run.");
+            description: "The owner of an EcsTask cancels its token when the work must stop. A wait without the token " +
+                         "stays pending, and its finally blocks never run.");
 
         public static readonly DiagnosticDescriptor UnawaitedEcsTask = new DiagnosticDescriptor(
             id: "LEOECS105",

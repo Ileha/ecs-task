@@ -51,7 +51,7 @@ namespace LeoECSLiteExtensions.Analyzers
             var awaitExpression = (AwaitExpressionSyntax)context.Node;
             var model = context.SemanticModel;
 
-            // Only EcsTask code: its owner (AsyncRunSystem, EcsTask GOAP action) cancels this token.
+            // Only EcsTask code: the owner of the task cancels this token.
             var function = AsyncCode.GetEnclosingFunction(awaitExpression, model);
             if (function == null || !symbols.IsEcsTask(function.ReturnType))
             {

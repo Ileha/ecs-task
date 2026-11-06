@@ -3,8 +3,7 @@ using Microsoft.CodeAnalysis;
 namespace LeoECSLiteExtensions.Analyzers
 {
     /// <summary>
-    /// Knows the EcsTask types. Created once per compilation. Needs no ECS: EcsTask also runs outside systems
-    /// (e.g. GOAP actions).
+    /// Knows the EcsTask types. Created once per compilation. Needs no ECS.
     /// </summary>
     internal sealed class EcsTaskSymbols
     {

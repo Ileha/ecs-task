@@ -2,7 +2,7 @@ namespace LeoECSLiteExtensions.Analyzers.Tests
 {
     /// <summary>
     /// Tiny copies of EcsTask and UniTask, with the same names and namespaces. No ECS types on purpose:
-    /// the EcsTask rules must work in assemblies without LeoECS (e.g. GOAP actions).
+    /// the EcsTask rules must work in assemblies without LeoECS.
     /// </summary>
     internal static class EcsTaskStubs
     {
